@@ -1,24 +1,24 @@
-# Resume Analyzer
-
-![Project Logo](https://via.placeholder.com/150 "Project Logo")
-
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/yourusername/ResumeAnalyzer/actions)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![Version](https://img.shields.io/badge/version-1.0.0-blue)](https://github.com/yourusername/ResumeAnalyzer/releases)
-[![Downloads](https://img.shields.io/badge/downloads-1k%2B-brightgreen)](https://github.com/yourusername/ResumeAnalyzer)
+
+# Resume Analyzer
+
+<p align="center">
+   <img src="https://github.com/user-attachments/assets/f362b9a9-d322-4a91-8bb6-58fb44c2e210" alt="Project Logo" width="400px">
+</p>
 
 Analyze and score resumes using AI models to extract relevant information and evaluate candidates based on specific criteria.
 
 ---
 
-![Resume Analyzer Workflow](https://via.placeholder.com/800x400 "Workflow Visualization")
 
 ## ⚡ Table of Contents
 - [🌟 Project Overview](#-project-overview)
 - [📥 Installation Instructions](#-installation-instructions)
 - [🛠️ Usage Guide](#️-usage-guide)
 - [✨ Features](#-features)
-- [📐 Architecture](#-architecture)
+- [📐 Workflow](#-workflow)
 - [🛑 Technologies and Dependencies](#-technologies-and-dependencies)
 - [🔧 Setup for Development](#-setup-for-development)
 - [🚀 Roadmap](#-roadmap)
@@ -93,21 +93,48 @@ Resume Analyzer is a tool designed to process PDF resumes, extract relevant info
 - **Parallel Processing**: Processes multiple resumes simultaneously for faster execution.
 - **Detailed Reports**: Generates detailed Excel reports with extracted data and scores.
 
-## 📐 Architecture
 
-The project is structured as follows:
+## 📐 Workflow
 
-**Root Directory:**
-- `.env`: Environment variables file.
-- `requirements.txt`: Python dependencies.
-- `input_resumes`: Directory for input PDF resumes.
-- `output`: Directory for extracted JSON data and Excel files.
-- `src`: Source code directory.
+```plaintext
++-------------------+       +-------------------+       +-------------------+
+|                   |       |                   |       |                   |
+|   Input Resumes   +------->  Data Extraction  +------->  JSON Data Files  |
+|                   |       |                   |       |                   |
++-------------------+       +--------+----------+       +-------------------+
+                                    |
+                                    |
+                                    v
+                          +---------+----------+
+                          |                    |
+                          |  Resume Processing |
+                          |                    |
+                          +---------+----------+
+                                    |
+                                    |
+                                    v
+                          +---------+----------+
+                          |                    |
+                          |    Scoring         |
+                          |                    |
+                          +---------+----------+
+                                    |
+                                    |
+                                    v
+                          +---------+----------+
+                          |                    |
+                          |  Excel Report      |
+                          |                    |
+                          +--------------------+
+```
 
-### Workflow
-1. **Data Extraction**: Extracts text from PDF resumes and uses AI models to extract specific fields.
-2. **Resume Processing**: Processes all resumes, scores them, and saves the results to an Excel file.
-3. **Scoring**: Uses AI models to score resumes based on extracted data.
+
+
+1. **Input Resumes**: Place PDF resumes in the `input_resumes` directory.
+2. **Data Extraction**: Run the data extraction script to extract key information from the resumes and save it as JSON files.
+3. **Resume Processing**: Process the JSON data files to prepare them for scoring.
+4. **Scoring**: Score the resumes based on the extracted data using AI models.
+5. **Excel Report**: Generate a detailed Excel report with the extracted data and scores.
 
 
 ## 🛑 Technologies and Dependencies
@@ -140,5 +167,5 @@ Clone the repository and set up the environment as described in the installation
 
 For queries or feedback, please contact:
 
-- **Email**: your.email@example.com
+- **Email**: udaygupta.ph@gmail.com
 - **GitHub Issues**: Open an issue
